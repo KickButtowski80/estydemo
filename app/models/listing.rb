@@ -5,7 +5,6 @@ class Listing < ActiveRecord::Base
   :thumb => "50x50",
   
   },
-  :default_url => "No_Image.jpg",
-  :default_style => :thumb
+  :default_url => "No_Image.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end
