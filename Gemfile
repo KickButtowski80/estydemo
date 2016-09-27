@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
  #it was 4.2.5 , but now is 5
-gem 'rails', '5' 
+gem 'rails', '4.2.5' 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
