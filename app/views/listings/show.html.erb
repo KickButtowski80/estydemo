@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <%=image_tag @listing.image.url(:medium)  %>
+</p>
 <p>
   <strong>Name:</strong>
   <%= @listing.name %>
@@ -15,5 +17,6 @@
   <%= @listing.price %>
 </p>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+
+<%= link_to 'Edit', edit_listing_path(@listing), class: 'btn btn-link'%> |
+<%= link_to 'Back', listings_path , class: 'btn btn-link'%>
