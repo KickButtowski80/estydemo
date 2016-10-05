@@ -7,7 +7,7 @@ class Listing < ActiveRecord::Base
   },
   :default_url => "No_Image.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
-  validates_uniqueness_of   :name, :description, :price
+  validates_uniqueness_of   :name, :description
   validates :name, :description, :price, presence: true
   validates :price, numericality: { greater_than: 0}
   
