@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   
   
-  devise_fo :users
+  devise_for :users
   
   get 'users/sign_out' => "devise/sessions#destroy"
   resources :listings
