@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-
-  devise_for :users, path: '', path_names: { sign_out: 'logout' }
-
+  
+  
+  
+  devise_fo :users
+  
+  get 'users/sign_out' => "devise/sessions#destroy"
   resources :listings
   get 'pages/contact' => 'pages#contact' 
   get 'pages/about'=> "pages#about" 
