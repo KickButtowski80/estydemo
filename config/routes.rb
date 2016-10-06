@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   
   devise_for :users
   
-  get 'users/sign_out' => "devise/sessions#destroy"
+  devise_scope :user do
+    get 'users/sign_out' => "devise/sessions#destroy"
+  end
+
   resources :listings
   get 'pages/contact' => 'pages#contact' 
   get 'pages/about'=> "pages#about" 
