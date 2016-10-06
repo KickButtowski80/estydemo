@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   
   
   devise_for :users
-  get 'users/sign_out' => 'sessions#destroy', :as => :destroy_user_session
   resources :listings
   get 'pages/contact' => 'pages#contact' 
   get 'pages/about'=> "pages#about" 
