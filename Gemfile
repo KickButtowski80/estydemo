@@ -13,7 +13,7 @@ ruby '2.3.0'
  gem 'bootstrap-sass'
  gem "paperclip"
  gem 'devise' 
- 
+ gem  'puma'
  group :development, :test do
     gem 'sqlite3'
  end
@@ -21,7 +21,6 @@ ruby '2.3.0'
  
  group :production do 
    gem  'pg'
-   gem  'puma'
    gem 'rails_12factor'
  end
  
