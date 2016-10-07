@@ -6,6 +6,7 @@ body{
     background-color: #F5F5F5;
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
+   // margin: 0px !important;
 }
 
 .navbar-default{
@@ -17,6 +18,7 @@ body{
     font-weight: 400;
     color: #F45800;
     font-size: 30px;
+   // line-height: 50px;
 }
 .navbar-default .navbar-nav > li > a {
     font-family: Arial, Helvetica, sans-serif;
@@ -55,19 +57,17 @@ body{
 }
 
 @media only screen and (max-width: 928px) {
- .col-md-3:nth-child(4n+1){
-    clear:left;
-  }
+  
  .thumbnail { 
-      width: 250px;
-      height: 250px;
+      width: auto;
+      height: auto;
     }
 }
 
 
 .jumbotron {
   background-color: #fab66f;
-  background: url('http://storypad.info/wp-content/uploads/2015/08/dollarphotoclub_65482539.jpg') repeat center center;
+  background: url('http://storypad.info/wp-content/uploads/2015/08/dollarphotoclub_65482539.jpg');
   background-size: cover;
   color: #ffffff;
   text-align: center;
@@ -76,10 +76,9 @@ body{
   h1{
     color: #1affd1;
     font-weight: bold;
-    
   }
   h2{
-     color: white;
+     color: #e62e00;
      font-weight: bold;
   }
 }

@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   
-  
-  
-  resources :orders
   devise_for :users
   
   devise_scope :user do
     get 'users/sign_out' => "devise/sessions#destroy"
   end
 
-  resources :listings
+  resources :listings do
+    resources :orders
+  end
+  
   get 'pages/contact' => 'pages#contact' 
   get 'pages/about'=> "pages#about" 
   get 'seller' => 'listings#seller'
