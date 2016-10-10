@@ -32,11 +32,14 @@ body{
 
 
 .thumbnail {
+     
      height: 250px;
      width:  250px;
 }
 
- 
+ .col-md-3 {
+     display: inline-block;
+ }
  
 .col-md-6 {
     h3 { font-size: 45px };
@@ -56,19 +59,10 @@ body{
     }
 }
 
-@media only screen and (max-width: 928px) {
-  
- .thumbnail { 
-      width: auto;
-      height: auto;
-    }
-}
-
-
 .jumbotron {
   background-color: #fab66f;
   background: url('http://storypad.info/wp-content/uploads/2015/08/dollarphotoclub_65482539.jpg');
-  background-size: cover;
+  background-size: 100% 100%;;
   color: #ffffff;
   text-align: center;
   border: 1px solid #f2cb3b;

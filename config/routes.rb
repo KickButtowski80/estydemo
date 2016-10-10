@@ -7,13 +7,15 @@ Rails.application.routes.draw do
   end
 
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
   
   get 'pages/contact' => 'pages#contact' 
   get 'pages/about'=> "pages#about" 
   get 'seller' => 'listings#seller'
-
+  get 'sales' => "orders#sales"
+  get 'purchases' => "orders#purchases"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

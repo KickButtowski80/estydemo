@@ -14,6 +14,8 @@ ruby '2.3.0'
  gem "paperclip"
  gem 'devise' 
  gem  'puma'
+ 
+ gem 'htmlbeautifier'
  group :development, :test do
     gem 'sqlite3'
  end

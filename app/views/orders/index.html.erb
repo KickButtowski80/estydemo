@@ -1,31 +1,35 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Orders</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.address %></td>
+<table class='table table-striped table-bordered center'>
+ <tr>
+    <th class='center'>Address</th>
+    <th class='center'>City</th>
+    <th class='center'>State</th>
+    <th class='center' >Action</th>
+ </tr>
+ <% @orders.each do |order| %>
+ <tr>
+    <<td><%= order.address %></td>
         <td><%= order.city %></td>
         <td><%= order.state %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+        <td>
+          <div class="dropdown">
+           <button
+            type ="button"
+            class="btn btn-primary dropdown-toggle" 
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+             Action <span class='caret'></span>
+           </button>
+           <ul class="dropdown-menu" role='menu'> 
+            <li><%= link_to "Show", listing_order_path(@listing, order.id), class:'btn btn-link'%></li>
+            <li><%= link_to 'Edit', edit_listing_order_path(@listing, order.id), class:'btn btn-link' %></li>
+            <li><%= link_to 'Destroy', listing_order_path(@listing, order.id), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-link' %></li>
+          </ul>  
+        </td> 
+ </tr>
+ <%end%>   
 </table>
-
 <br>
 
-<%= link_to 'New Order', new_order_path %>
+<%= link_to 'New Order', new_listing_order_path %>

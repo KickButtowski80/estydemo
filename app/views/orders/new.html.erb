@@ -2,4 +2,4 @@
 
 <%= render 'form', order: @order %>
 
-<%= link_to 'Back', listing_orders_path , class: 'btn btn-link'%>
+<%= link_to 'Back', listing_path(@listing.id) , class: 'btn btn-link'%>
