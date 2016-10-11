@@ -1,8 +1,9 @@
-
+source 'https://code.stripe.come'
 source 'https://rubygems.org'
 ruby '2.3.0'
    #it was 4.2.5 , but now is 5
  gem 'rails', '5.0.0.1' 
+ gem 'stripe'
  gem 'sass-rails'
  gem 'uglifier'
  gem 'coffee-rails'
@@ -13,8 +14,8 @@ ruby '2.3.0'
  gem 'bootstrap-sass'
  gem "paperclip"
  gem 'devise' 
- gem  'puma'
- 
+ gem 'puma'
+ gem 'figaro'
  gem 'htmlbeautifier'
  group :development, :test do
     gem 'sqlite3'
