@@ -1,4 +1,3 @@
-source 'https://code.stripe.come'
 source 'https://rubygems.org'
 ruby '2.3.0'
    #it was 4.2.5 , but now is 5
