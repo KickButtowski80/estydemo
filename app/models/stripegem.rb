@@ -1,0 +1,2 @@
+class Stripegem < ApplicationRecord
+end

@@ -1,0 +1,1 @@
+json.partial! "stripegems/stripegem", stripegem: @stripegem

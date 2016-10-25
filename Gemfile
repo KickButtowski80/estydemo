@@ -16,6 +16,8 @@ ruby '2.3.0'
  gem 'puma'
  gem 'figaro'
  gem 'htmlbeautifier'
+ #Embed the V8 JavaScript interpreter into Ruby.
+ gem "therubyracer"
  group :development, :test do
     gem 'sqlite3'
  end
