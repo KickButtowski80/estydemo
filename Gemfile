@@ -7,7 +7,6 @@ ruby '2.3.0'
  gem 'uglifier'
  gem 'coffee-rails'
  gem 'coffee-script-source'
- gem 'jquery-rails'
 # gem 'turbolinks'
  gem 'jbuilder'
  gem 'bootstrap-sass'
@@ -18,6 +17,7 @@ ruby '2.3.0'
  gem 'htmlbeautifier'
  #Embed the V8 JavaScript interpreter into Ruby.
  gem "therubyracer"
+ gem 'jquery-rails'
  group :development, :test do
     gem 'sqlite3'
  end
