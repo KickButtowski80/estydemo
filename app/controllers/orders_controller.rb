@@ -27,18 +27,20 @@ class OrdersController < ApplicationController
     @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
 
-    Stripe.api_key = ENV["STRIPE_API_KEY"]
+    Stripe.api_key = ENV["stripe_api_key"]
+    #flash[:notice] = Stripe.api_key
+    #puts "stripe api key is " + Stripe.api_key
     token = params[:stripeToken]
 
     begin
       customer = Stripe::Customer.create(
-          :source  => token,
-          :description => "Customer from esty.com"
+        :source  => token,
+        :description => "Customer.create"
         )
       charge = Stripe::Charge.create(
         :customer    => customer.id,
         :amount => (@listing.price * 100).floor,
-        :description =>  @listing.name,
+        :description => 'charge.create',
         :currency => "usd"
         )
       flash[:notice] = "Thanks for ordering!"

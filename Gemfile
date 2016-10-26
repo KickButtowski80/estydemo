@@ -8,7 +8,7 @@ ruby '2.3.0'
  gem 'coffee-rails'
  gem 'coffee-script-source'
  gem 'jquery-rails'
- gem 'turbolinks'
+# gem 'turbolinks'
  gem 'jbuilder'
  gem 'bootstrap-sass'
  gem "paperclip"
