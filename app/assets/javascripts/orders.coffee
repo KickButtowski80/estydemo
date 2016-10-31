@@ -8,8 +8,6 @@ payment =
       $('input[type=submit]').attr('disabled', true)
       obj = Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
       alert(JSON.stringify(obj));
-      console.log(obj);
-      false
 
   handleStripeResponse: (status, response) ->
     if status == 200
