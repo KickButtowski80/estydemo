@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
               :description => 'charge.create',
               :currency => "usd"
               )
-             save
+              @order.save
           else
             flash[:notice] = 'You will slove it'
           end
