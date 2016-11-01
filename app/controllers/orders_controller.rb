@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
 
     begin
       
-      card = customer.sources.create({:source => token})
+     # card = customer.sources.create({:source => token})
       charge = Stripe::Charge.create(
         :amount => (@listing.price * 100).floor,
         :description => 'charge.create',
