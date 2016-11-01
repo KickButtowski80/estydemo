@@ -34,21 +34,16 @@ class OrdersController < ApplicationController
 
     begin
       customer = Stripe::Customer.create(
-        :email => current_user.email,
+       
         :description => "Customer.create"
         )
-         if valid?
-            Stripe::Charge.create(
-              :customer    => customer.id,
-              :amount => (@listing.price * 100).floor,
-              :card  => params[:stripeToken],
-              :description => 'charge.create',
-              :currency => "usd"
-              )
-              @order.save
-          else
-            flash[:notice] = 'You will slove it'
-          end
+      charge = Stripe::Charge.create(
+        :customer    => customer.id,
+        :amount => (@listing.price * 100).floor,
+        :description => 'charge.create',
+        :source  => token,
+        :currency => "usd"
+        )
       flash[:notice] = "Thanks for ordering!"
     rescue Stripe::CardError => e
        flash[:danger] = e.message
