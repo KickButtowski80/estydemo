@@ -6,8 +6,8 @@ payment =
   setupForm: ->
     $('#new_order').submit ->
       $('input[type=submit]').attr('disabled', true)
-      obj = Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
-      alert(JSON.stringify(obj));
+      Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
+      false
 
   handleStripeResponse: (status, response) ->
     if status == 200
