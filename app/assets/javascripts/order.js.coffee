@@ -12,6 +12,7 @@ payment =
   handleStripeResponse: (status, response) ->
     if status == 200
       $('#new_order').append($('<input type="hidden" name="stripeToken" />').val(response.id))
+      alert(response)
       $('#new_order')[0].submit()
     else
       $('#stripe_error').text(response.error.message).show()
