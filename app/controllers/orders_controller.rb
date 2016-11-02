@@ -14,6 +14,8 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @listing = Listing.find(params[:listing_id])
+    Stripe.api_key = ENV["stripe_api_key"]
+    flash[:notice] = Stripe.api_key
   end
 
   # POST /orders
