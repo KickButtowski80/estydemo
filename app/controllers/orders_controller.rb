@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
     @order.seller_id = @seller.id
 
     Stripe.api_key = ENV["stripe_api_key"]
-    #flash[:notice] = Stripe.api_key
+    flash[:notice] = Stripe.api_key
     #puts "stripe api key is " + Stripe.api_key
     token = params[:stripeToken]
 
