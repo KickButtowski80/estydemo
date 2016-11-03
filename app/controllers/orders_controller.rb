@@ -33,6 +33,8 @@ class OrdersController < ApplicationController
     flash[:notice] = Stripe.api_key
     #puts "stripe api key is " + Stripe.api_key
     token = params[:stripeToken]
+    
+    puts "\n\nnMy token is.....#{token}\n\n"
 
     begin
       customer = Stripe::Customer.create(
