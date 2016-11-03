@@ -32,9 +32,9 @@ class OrdersController < ApplicationController
     Stripe.api_key = ENV["stripe_api_key"]
     #flash[:notice] = Stripe.api_key
     #puts "stripe api key is " + Stripe.api_key
-    token = params[:stripeToken]
-    
-    flash[:notice] = token 
+    unless token = params[:stripeToken]
+      flash[:alert] = 'You did not submit the form correctly'
+    end
 
     begin
       customer = Stripe::Customer.create(
