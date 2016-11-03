@@ -5,7 +5,7 @@ jQuery ->
 payment =
   setupForm: ->
     $('#new_order').submit ->
-      $('input[type=submit]').attr('disabled', true)
+      $('#subButton').attr('disabled', true)
       Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
       false
 
@@ -15,4 +15,4 @@ payment =
       $('#new_order')[0].submit()
     else
       $('#stripe_error').text(response.error.message).show()
-      $('input[type=submit]').attr('disabled', false)
+      $('#subButton').attr('disabled', false)
