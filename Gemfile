@@ -15,16 +15,16 @@ ruby '2.3.0'
  gem 'puma'
  gem 'figaro'
  gem 'htmlbeautifier'
-
  gem 'jquery-rails'
  gem 'node', '~> 0.0.2'
+ 
  group :development, :test do
     gem 'sqlite3'
  end
  
  
  group :production do 
-   gem  'pg'
+   gem 'pg'
    gem 'rails_12factor'
  end
  
